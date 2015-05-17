@@ -1,8 +1,44 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Mashup</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>CityStalker Social Mapping</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script src="instaApp.js"></script>
+    <script src="googleMap.js"></script>
+    <script src="imagesArray.js"></script>
+    <script src="imageObject.js"></script>
+    <script src="mapMarker.js"></script>
+    <script src="foursquareCategories.js"></script>
+    <script src="vendor/swipebox/src/js/jquery.swipebox.js"></script>
+    <link rel="stylesheet" href="vendor/swipebox/src/css/swipebox.css">
+    <link rel="stylesheet" href="insta.css">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
   </head>
   <body>
+    <h1>CityStalker</h1>
+    <div>
+      <button id="search">Search!</button>
+      <div class="loader-container"><div class="loader">Loading</div></div>
+      <div id="map-canvas"></div>
+    </div>
   </body>
+  <script>
+    APP = new InstaApp();
+    APP.initListeners();
+  </script>
+  <script type="text/javascript">
+    ;( function( $ ) {
+
+      $( '.swipebox' ).swipebox();
+
+    } )( jQuery );
+  </script>
 </html>
