@@ -1,30 +1,13 @@
 # Mashup project
 
-This project is open-ended!  Requirements:
+CityStalker pulls in geotagged photos from your Instagram feed to show you interesting places in your city that
+your friends have recently visited.
 
-* Build a site that uses data from at least one external API in an interesting, interactive way.
-* Replace this README with a description of the project.
-* You are welcome to use any 3rd-party libraries/frameworks – just load them from a CDN (e.g. [cdnjs](http://cdnjs.com)), or put them under the [`vendor/`](vendor/) folder.
+It uses the Instagram API to grab your feed (right now it's MY feed until I can get authentication working locally) and
+displays photos using the Google Maps API. If you hover over a map marker, you can see the name of a location - and if you
+click, you can see the photo(s) taken at that location.
 
-The JS code should be **non-trivial**.  That being said... start simple!  No server-side coding is required, but feel free to create a backend in whatever language if you like, if you need one.
-
-* [AJAX demos](https://github.com/advanced-js/deck/tree/gh-pages/demos/ajax)
-* [list of API suggestions](https://gist.github.com/afeld/4952991)
-* [inspiration?](http://www.programmableweb.com/mashups)
-
-## V1
-
-First pass.
-
-## V2
-
-Iterate!
-
-* Refactor
-* Add a new feature
-
-## Bonus points
-
-* automated tests
-    * [Sinon.js fakeServer](http://sinonjs.org/docs/#fakeServer) may be helpful
-* fancy interactivity/animations
+It also has the functionality to categorize locations using FourSquare's API. If there is a very close matching location
+(by name and lat/long coordinates), it will pull in the category and display the appropriate icon on the map marker. For now,
+most of the functionality is there, but the list of category and IDs and their associated icons is not completed, so this
+feature is turned off.
