@@ -35,15 +35,16 @@ MapMarker.prototype.displayImageModal = function() {
 		return {
 			href: image.images.standard_resolution.url,
 			title: image.caption.text
-		}
+		};
 	});
 
 	$.swipebox(swipeboxObj);
 };
 
 MapMarker.prototype.setCategoryMarker = function(map) {
-	var category = new FoursquareCategories(this.lat, this.long, this.name);
+	var location = { lat: this.lat, long: this.long, name: this.name };
+	var category = new FoursquareCategories(location);
 	var icon = category.getIcon(category.getCategory);
-	this.googleMarker.setIcon(icon)
+	this.googleMarker.setIcon(icon);
 };
 

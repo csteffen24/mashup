@@ -1,6 +1,6 @@
 var FeedArray = function() {
 	this.locationObjects = [];
-	this.nextUrl = "https://api.instagram.com/v1/users/self/feed?count=100&access_token=42839160.2671010.57239e4234964f129f41422e58c51aa1&client_id=267101077fa84a42b4ae46894edb044a"
+	this.nextUrl = "https://api.instagram.com/v1/users/self/feed?count=100&access_token=42839160.2671010.57239e4234964f129f41422e58c51aa1&client_id=267101077fa84a42b4ae46894edb044a";
 };
 
 FeedArray.prototype.addLocationObject = function(image) {
@@ -32,11 +32,11 @@ FeedArray.prototype.fetchFeed = function() {
 					self.addLocationObject(image);
 				}
 			});
-			// if (self.nextUrl !== undefined) {
-			// 	self.fetchFeed();
-			// } else {
+			if (self.nextUrl !== undefined) {
+				self.fetchFeed();
+			} else {
 				APP.feedFinished();
-			// }
+			}
 		}
 	});
-}
+};

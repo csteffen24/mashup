@@ -4,7 +4,7 @@
 
 var InstaApp = function() {
 	this.imagesArray = new ImagesArray();
-	this.map;
+	this.map = null;
 	this.baseUrl = "/Users/csteffen/advanced-js/instagram/";
 
 	this.city = {

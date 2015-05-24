@@ -2,23 +2,23 @@
 	This object handles retreiving the foursquare venue cateogory for a given location. It also
 	assigns an icon image to the google map marker based off of the category of the location.
 */
-var FoursquareCategories = function(lat, long, name) {
-	this.lat = lat;
-	this.long = long;
-	this.name = name;
+var FoursquareCategories = function(location) {
+	this.lat = location.lat;
+	this.long = location.long;
+	this.name = location.name;
 
 	this.secret = "3T3PSEZNZGCAQ53JPV0XVEGMTSAPM1OYVSL5PX4BLRT0VO4F";
 	this.clientId = "CXGMUOWMT2C3MDE03HZYLH4L1NDIFIOQFTSVHWDTWKHUVSRM";
 	this.baseUrl = "https://api.foursquare.com/v2/venues/";
 	this.url = this.baseUrl +'search?ll=' + this.lat + ',' + this.long
-	  + ',&query=' + self.name + "&intent= match&client_id=" + this.clientId + 
-	  "&client_secret=" + this.secret + "&v=20140701";
+     + ',&query=' + self.name + "&intent= match&client_id=" + this.clientId + 
+     "&client_secret=" + this.secret + "&v=20140701";
 	this.baseImgUrl = APP.baseUrl + "vendor/";
-	this.listUrl = this.baseUrl + "/categories"
+	this.listUrl = this.baseUrl + "/categories";
 
-	this.categoryId;
-	this.categoryName;
-	this.categoryImg;
+	this.categoryId = "";
+	this.categoryName = "";
+	this.categoryImg = "";
 
 	this.getCategory();
 };
@@ -66,4 +66,4 @@ FoursquareCategories.prototype.categories = {
 		 	"imgName": "other.svg"
 		}
 	*/
-}
+};

@@ -10,7 +10,7 @@ var ImagesArray = function() {
 	this.instaClientId = "267101077fa84a42b4ae46894edb044a";
 	this.imageCountLimit = 50;
 	this.url = "https://api.instagram.com/v1/users/self/feed?count=" + this.imageCountLimit
-	  + "&access_token=" + this.instaToken + "&client_id=" + this.instaClientId;
+     + "&access_token=" + this.instaToken + "&client_id=" + this.instaClientId;
 };
 
 ImagesArray.prototype.fetchFeed = function(url) {

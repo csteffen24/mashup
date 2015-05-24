@@ -10,9 +10,9 @@ var GoogleMap = function() {
 	this.mapOptions = {
 		zoom: 13,
 		center: new google.maps.LatLng(midLat, midLong)
-	}
+	};
 
-	this.map;
+	this.map = null;
 	this.markers = [];
 };
 
@@ -55,7 +55,7 @@ GoogleMap.prototype.displayMarkers = function() {
 	$.each(this.markers, function(i, marker) {
 		marker.displayMarker(map);
 	});
-}
+};
 
 GoogleMap.prototype.setStyle = function() {
 	var style = [
