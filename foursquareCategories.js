@@ -10,9 +10,7 @@ var FoursquareCategories = function(location) {
 	this.secret = "3T3PSEZNZGCAQ53JPV0XVEGMTSAPM1OYVSL5PX4BLRT0VO4F";
 	this.clientId = "CXGMUOWMT2C3MDE03HZYLH4L1NDIFIOQFTSVHWDTWKHUVSRM";
 	this.baseUrl = "https://api.foursquare.com/v2/venues/";
-	this.url = this.baseUrl +'search?ll=' + this.lat + ',' + this.long
-     + ',&query=' + self.name + "&intent= match&client_id=" + this.clientId + 
-     "&client_secret=" + this.secret + "&v=20140701";
+	this.url = this.baseUrl +'search?ll=' + this.lat + ',' + this.long + ',&query=' + self.name + "&intent= match&client_id=" + this.clientId +  "&client_secret=" + this.secret + "&v=20140701";
 	this.baseImgUrl = APP.baseUrl + "vendor/";
 	this.listUrl = this.baseUrl + "/categories";
 

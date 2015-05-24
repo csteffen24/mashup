@@ -9,8 +9,7 @@ var ImagesArray = function() {
 	this.instaToken = "42839160.2671010.57239e4234964f129f41422e58c51aa1";
 	this.instaClientId = "267101077fa84a42b4ae46894edb044a";
 	this.imageCountLimit = 50;
-	this.url = "https://api.instagram.com/v1/users/self/feed?count=" + this.imageCountLimit
-     + "&access_token=" + this.instaToken + "&client_id=" + this.instaClientId;
+	this.url = "https://api.instagram.com/v1/users/self/feed?count=" + this.imageCountLimit + "&access_token=" + this.instaToken + "&client_id=" + this.instaClientId;
 };
 
 ImagesArray.prototype.fetchFeed = function(url) {
